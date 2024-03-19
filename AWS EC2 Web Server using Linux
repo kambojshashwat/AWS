@@ -1,0 +1,36 @@
+AWS EC2 Web Server Deployment
+This project provides a step-by-step guide to deploy a web server on an Amazon EC2 instance using Linux (Amazon Linux 2).
+
+Steps
+1. Launch an EC2 Instance
+Sign in to the AWS Management Console and navigate to the EC2 dashboard.
+Click on "Launch Instance" to begin the instance creation process.
+Choose an Amazon Machine Image (AMI): Select Amazon Linux 2.
+Select an Instance Type: Choose a suitable instance type (e.g. t2.micro for Free Tier).
+Configure Instance Details, Add Storage, Add Tags, and Configure Security Group as needed. Ensure port 80 (HTTP) is open in the security group.
+Review your instance configuration and click "Launch".
+Select an existing key pair or create a new one, and then launch your instance.
+2. Connect to Your EC2 Instance
+Once your instance is running, select it from the EC2 dashboard.
+Click on "Connect" to get instructions on how to connect to your instance using SSH.
+3. Install and Configure Apache Web Server
+Connect to your EC2 instance using SSH.
+Update the package repository: sudo yum update -y.
+Install Apache web server: sudo yum install httpd -y.
+Start the Apache service: sudo systemctl start httpd.
+Enable Apache to start on boot: sudo systemctl enable httpd.
+4. Test Your Web Server
+Open a web browser and enter your EC2 instance's public IP address(13.233.27.125). You should see the Apache default page indicating your web server is running.
+5. Deploy Your Website
+Upload your website files to the default document root directory: sudo cp -r /path/to/your/website/* /var/www/html/.
+Restart Apache for the changes to take effect: sudo systemctl restart httpd.
+6. Monitor and Maintain Your Web Server
+Regularly monitor your web server's performance and security.
+Keep your server and web applications updated with the latest patches.
+Conclusion
+Congratulations! I have successfully deployed a web server on an EC2 instance using Linux.
+
+
+
+
+
