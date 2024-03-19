@@ -1,0 +1,42 @@
+AWS Mini Project: Deploying a Windows Virtual Machine
+Objective: Deploy a Windows virtual machine (VM)/Instance on AWS EC2.
+
+Step 1: Sign in to AWS Console
+Open your web browser and navigate to the AWS Management Console.
+Sign in with your AWS account credentials.
+Step 2: Launch EC2 Instance
+Navigate to the EC2 service dashboard.
+Click on "Launch Instance" to start the instance creation process.
+Follow the on-screen instructions:
+Choose an AMI: Select a Windows Server AMI, preferably one eligible for the Free Tier.
+Select Instance Type: Choose an instance type, such as t2.micro(free tier).
+Configure Instance: Keep default settings or customize as needed (e.g., network settings, IAM roles).
+Add Storage: Configure storage options.
+Add Tags: (Optional) Add tags for easy identification.
+Configure Security Group: Ensure RDP (port 3389) is allowed in the security group.
+Review and Launch: Review your instance configuration and launch the instance.
+Step 3: Connect to Your Windows Virtual Machine.
+Once the instance is running, select it from the EC2 dashboard.
+Click on "Connect" and choose "RDP client" to download the Remote Desktop File.
+Open the Remote Desktop client on your local machine (Windows Remote Desktop or any RDP client for macOS).
+Use the downloaded Remote Desktop File to connect to your Windows VM using the public IP address.
+Enter the username (usually Administrator) and password. You can retrieve the password from the instance details by decrypting the key pair file.
+Step 4: Configure Your Windows VM
+Upon successful connection, you'll be logged into your Windows VM.
+Customize your VM settings, install applications, and configure services as needed.
+Ensure to apply security best practices and keep your VM updated with the latest patches.
+Step 5: Explore EC2 Instance Details
+Return to the EC2 dashboard and select your instance.
+Explore various details such as instance ID, public IP, private IP, security groups, monitoring metrics, etc.
+Familiarize yourself with instance management options like stopping, starting, and terminating instances.
+Step 6: Cleanup
+Once you've finished experimenting, stop or terminate your EC2 instance to avoid ongoing charges.
+Optionally, delete associated resources like key pairs, security groups, and EBS volumes if they're no longer needed.
+Conclusion
+By completing this project, I have gained hands-on experience deploying a Windows VM on AWS EC2, connecting to it using RDP, and exploring essential instance management tasks. This project provides a solid foundation for further exploration and learning in AWS cloud computing.
+
+
+
+
+
+
