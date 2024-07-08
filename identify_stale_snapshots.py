@@ -1,5 +1,7 @@
 #Maximizing AWS Cost Efficiency: Uncovering Stale Snapshots for Optimal Management
 
+#STEP TO PROCESS: https://medium.com/@shashwatkamboj12/automated-cost-optimization-for-aws-snapshots-24bc803df1a1
+
 import boto3
 
 def lambda_handler(event, context):
